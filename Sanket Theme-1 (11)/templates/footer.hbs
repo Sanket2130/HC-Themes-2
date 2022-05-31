@@ -1,0 +1,33 @@
+<footer class="footer">
+  <div class="footer-inner">
+
+
+        {{#is settings.minimal_footer false}}
+      <div>
+        {{#is settings.footer_title_1 true}}
+          {{settings.footer_title_text_1}}
+        {{/is}}
+      </div>
+      <div>
+        {{#is settings.footer_title_2 true}}
+          {{settings.footer_title_text_2}}
+        {{/is}}
+      </div>
+      <div>
+        {{#is settings.footer_title_3 true}}
+           {{settings.footer_title_text_3}}
+        {{/is}}
+      </div>
+      <div>
+        {{#is settings.footer_title_4 true}}
+           {{settings.footer_title_text_4}}
+        {{/is}}
+      </div>
+      {{/is}}
+		</div>
+  
+  <div class= footer-outer>
+  <h5 id="curr_year" class="footer-year"></h5>
+  <h5 class="footer-year">-dynanetthemes.com. All rights reserved.</h5>
+  </div>
+</footer>

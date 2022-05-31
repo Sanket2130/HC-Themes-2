@@ -1,0 +1,163 @@
+<h1 class="visibility-hidden">{{ help_center.name }}</h1>
+
+<section id="main-content" class="section hero">
+  <div class="hero-inner">
+        <div class="welcome-message-wrapper">
+    <h1 class="welcome-message">
+      {{settings.welcome_message}}
+    </h1>
+    </div>
+    <h2 class="visibility-hidden">{{ t 'search' }}</h2>
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon bar" aria-hidden="true">
+      <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
+      <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
+    </svg>
+    <i class="fa fa-search" aria-hidden="true"></i>
+    {{ search submit=false instant=settings.instant_search class='search search-full bar' placeholder="Search the Help Center"}}
+  </div>
+</section>
+
+<div class="container">
+  <section class="section knowledge-base">
+    <h2 class="visibility-hidden">{{ t 'categories' }}</h2>
+    <section class="categories blocks">
+      <ul class="blocks-list">
+
+        {{#is settings.show_custom_block_1 true}}
+        <li class="blocks-item blocks_custom">
+          <a href='{{settings.first_custom_block_url}}' class="blocks-item-link">
+            <span class="icons_wrapper ">
+                <img src="{{settings.first_custom_block_icon}}">
+            </span>
+            <span class="blocks-item-title custom-line">
+              {{settings.first_custom_block_title}}
+            </span>
+            {{#isnt settings.first_custom_block_description 'HIDE_ME'}}
+              <span class="blocks-item-description custom-line">
+                {{settings.first_custom_block_description}}
+              </span>
+            {{/isnt}}
+          </a>
+        </li>
+        {{/is}}
+
+        {{#is settings.show_custom_block_2 true}}
+        <li class="blocks-item blocks_custom">
+          <a href='{{settings.second_custom_block_url}}' class="blocks-item-link">
+            <span class="icons_wrapper">
+                <img src="{{settings.second_custom_block_icon}}">
+            </span>
+            <span class="blocks-item-title custom-line">
+              {{settings.second_custom_block_title}}
+            </span>
+            {{#isnt settings.second_custom_block_desc 'HIDE_ME'}}
+              <span class="blocks-item-description custom-line">
+                {{settings.second_custom_block_desc}} 
+              </span>
+            {{/isnt}}
+          </a>
+        </li>
+        {{/is}}
+
+        {{#is settings.show_custom_block_3 true}}
+        <li class="blocks-item blocks_custom">
+          <a href='{{settings.third_custom_block_url}}' class="blocks-item-link">
+            <span class="icons_wrapper">
+                <img src="{{settings.third_custom_block_icon}}">
+            </span>
+            <span class="blocks-item-title custom-line">
+              {{settings.third_custom_block_title}}
+            </span>
+            {{#isnt settings.third_custom_block_desc 'HIDE_ME'}}
+            <span class="blocks-item-description custom-line">
+              {{settings.third_custom_block_desc}}
+            </span>
+            {{/isnt}}
+          </a>
+        </li>
+        {{/is}}
+              </ul>
+        <ul class="blocks-list1">
+        {{#if settings.show_custom_box_4}}
+        <li class="blocks-item1 bg4">
+          <a href="{{settings.show_custom_box_4_link}}" class="blocks-item-link1">
+              <div class="cat-img-text-div">
+                <span class="blocks-item-title1 bg4">
+                  {{settings.custom_box_4_heading}}
+                </span>
+                {{#isnt settings.fourth_custom_block_desc 'HIDE_ME'}}
+                  <span class="blocks-item-description1">
+                    {{settings.fourth_custom_block_desc}} 
+                  </span>
+                {{/isnt}}
+              </div>
+          </a>
+        </li>
+      {{/if}}
+      {{#if settings.show_custom_box_5}}
+        <li class="blocks-item1 bg5">
+          <a href="{{settings.show_custom_box_5_link}}" class="blocks-item-link1">
+              <div class="cat-img-text-div">
+                <span class="blocks-item-title1 bg5">
+                  {{settings.custom_box_5_heading}}
+                </span>
+                {{#isnt settings.fifth_custom_block_desc 'HIDE_ME'}}
+                  <span class="blocks-item-description1">
+                    {{settings.fifth_custom_block_desc}} 
+                  </span>
+                {{/isnt}}
+              </div>
+          </a>
+        </li>
+      {{/if}}
+      {{#if settings.show_custom_box_6}}
+        <li class="blocks-item1 bg6">
+          <a href="{{settings.show_custom_box_6_link}}" class="blocks-item-link1">
+              <div class="cat-img-text-div">
+                <span class="blocks-item-title1 bg6">
+                  {{settings.custom_box_6_heading}}
+                </span>
+                {{#isnt settings.sixth_custom_block_desc 'HIDE_ME'}}
+                  <span class="blocks-item-description1">
+                    {{settings.sixth_custom_block_desc}} 
+                  </span>
+                {{/isnt}}
+              </div>
+          </a>
+        </li>
+      {{/if}}
+      {{#if settings.show_custom_box_7}}
+        <li class="blocks-item1 bg7">
+          <a href="{{settings.show_custom_box_7_link}}" class="blocks-item-link1">
+              <div class="cat-img-text-div">
+                <span class="blocks-item-title1 bg7">
+                  {{settings.custom_box_7_heading}}
+                </span>
+                {{#isnt settings.seventh_custom_block_desc 'HIDE_ME'}}
+                  <span class="blocks-item-description1">
+                    {{settings.seventh_custom_block_desc}} 
+                  </span>
+                {{/isnt}}
+              </div>
+          </a>
+        </li>
+      {{/if}}
+
+      <ul class="blocks-list2">
+        {{#is settings.show_custom_block_8 true}}
+        <li class="blocks-item2">
+{{!--           <a href='{{settings.eighth_custom_block_url}}' class="blocks-item-link2"> --}}
+            <p class="final-text">Just getting started? <a href="#">We can help</a></p>
+{{!--             <span class="blocks-item-title2">
+              {{settings.eighth_custom_block_title}}
+            </span> --}}
+          </a>
+        </li>
+        {{/is}}
+      </ul>
+      </ul>
+      {{pagination}}
+    </section>
+
+
+</div>
